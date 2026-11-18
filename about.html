@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Alex Chen — Computer Engineering Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="index.html" class="brand">
+                <span class="brand-bracket">&lt;</span>alex.chen<span class="brand-slash">/</span><span class="brand-bracket">&gt;</span>
+                <span class="brand-tag">CE '30</span>
+            </a>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link ">01. Home &amp; Build</a>
+                <a href="projects.html" class="nav-link ">02. Projects</a>
+                <a href="achievements.html" class="nav-link ">03. Achievements</a>
+                <a href="about.html" class="nav-link active">04. About Me</a>
+                <a href="contact.html" class="nav-link ">05. Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-main">
+        <section class="page-banner">
+            <div class="container">
+                <span class="section-kicker">// 04. STUDENT PROFILE</span>
+                <h1>About Alex Chen</h1>
+                <p>Incoming Computer Engineering freshman driven by curiosity about how electrons become instructions.</p>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="about-layout">
+                <!-- Left Profile Card -->
+                <aside class="profile-sidebar">
+                    <div class="profile-avatar">
+                        <div class="avatar-monogram">AC</div>
+                        <span class="online-indicator">Open to Research &amp; Internships</span>
+                    </div>
+                    <h2>Alex Chen</h2>
+                    <p class="profile-role">Incoming Computer Engineering Major (Class of 2030)</p>
+                    <hr class="divider">
+                    <ul class="profile-facts">
+                        <li><strong>Focus Areas:</strong> Embedded Systems, FPGA/ASIC Design, Robotics</li>
+                        <li><strong>Preferred Languages:</strong> C, C++, Verilog, Python</li>
+                        <li><strong>Lab Tools:</strong> Oscilloscope, Logic Analyzer, Multimeter, KiCad</li>
+                        <li><strong>Hobbies:</strong> Custom keyboards, badminton, retro console repair</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary full-width">Contact Alex &rarr;</a>
+                </aside>
+
+                <!-- Right Story & Skills -->
+                <div class="about-content">
+                    <div class="info-card">
+                        <h2>My Engineering Origin Story</h2>
+                        <p>
+                            My fascination with Computer Engineering began at age thirteen when I took apart a broken desktop motherboard to see how the CPU communicated with memory. Seeing copper traces route signals at billions of cycles per second convinced me that the most exciting work happens right at the boundary between physical hardware and software.
+                        </p>
+                        <p>
+                            Over the past four years, I have progressed from blinking my first LED on a breadboard to designing multi-layer PCBs, writing real-time firmware in C++, and synthesizing soft-core processors in Verilog. As I enter university for my B.S. in Computer Engineering, I aim to join an embedded systems or computer architecture research lab and contribute to energy-efficient computing.
+                        </p>
+                    </div>
+
+                    <div class="info-card">
+                        <h2>Technical Skill Matrix</h2>
+                        <div class="skills-bars">
+                            <div class="skill-row">
+                                <div class="skill-label"><span>C / Embedded C++ (STM32, ESP32, AVR)</span><span>92%</span></div>
+                                <div class="skill-track"><div class="skill-fill" style="width: 92%;"></div></div>
+                            </div>
+                            <div class="skill-row">
+                                <div class="skill-label"><span>Digital Logic &amp; Verilog HDL</span><span>84%</span></div>
+                                <div class="skill-track"><div class="skill-fill" style="width: 84%;"></div></div>
+                            </div>
+                            <div class="skill-row">
+                                <div class="skill-label"><span>PCB Layout &amp; Circuit Prototyping (KiCad)</span><span>86%</span></div>
+                                <div class="skill-track"><div class="skill-fill" style="width: 86%;"></div></div>
+                            </div>
+                            <div class="skill-row">
+                                <div class="skill-label"><span>Python, Linux &amp; Git Workflows</span><span>90%</span></div>
+                                <div class="skill-track"><div class="skill-fill" style="width: 90%;"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <h2>University Roadmap (2026–2030)</h2>
+                        <div class="roadmap-grid">
+                            <div class="roadmap-step">
+                                <span class="step-tag">Year 1</span>
+                                <h4>Foundations &amp; Maker Labs</h4>
+                                <p>Master multivariable calculus, electromagnetism, data structures, and join the university Formula SAE / Robotics electronics team.</p>
+                            </div>
+                            <div class="roadmap-step">
+                                <span class="step-tag">Year 2–3</span>
+                                <h4>Architecture &amp; Silicon</h4>
+                                <p>Dive into CMOS VLSI design, operating systems kernels, and secure a summer hardware engineering internship.</p>
+                            </div>
+                            <div class="roadmap-step">
+                                <span class="step-tag">Year 4</span>
+                                <h4>Capstone &amp; Research</h4>
+                                <p>Design a custom RISC-V accelerator chip or autonomous edge-AI system for senior capstone thesis.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-left">
+                <p class="footer-title">&lt;alex.chen /&gt; — Incoming Computer Engineering Freshman</p>
+                <p class="footer-sub">Engineered with pure HTML, CSS &amp; JavaScript. Zero frameworks, full control.</p>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="achievements.html">Achievements</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

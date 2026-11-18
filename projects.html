@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Alex Chen — Computer Engineering Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="index.html" class="brand">
+                <span class="brand-bracket">&lt;</span>alex.chen<span class="brand-slash">/</span><span class="brand-bracket">&gt;</span>
+                <span class="brand-tag">CE '30</span>
+            </a>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link ">01. Home &amp; Build</a>
+                <a href="projects.html" class="nav-link active">02. Projects</a>
+                <a href="achievements.html" class="nav-link ">03. Achievements</a>
+                <a href="about.html" class="nav-link ">04. About Me</a>
+                <a href="contact.html" class="nav-link ">05. Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-main">
+        <section class="page-banner">
+            <div class="container">
+                <span class="section-kicker">// 02. ENGINEERING ARCHIVE</span>
+                <h1>Hardware &amp; Software Projects</h1>
+                <p>Hands-on systems built across embedded microcontrollers, digital logic design, PCB fabrication, and C++/Python applications.</p>
+            </div>
+        </section>
+
+        <section class="container">
+            <!-- Category Filter Bar -->
+            <div class="filter-bar">
+                <button class="filter-chip active" data-filter="all">All Systems (6)</button>
+                <button class="filter-chip" data-filter="embedded">Embedded &amp; Robotics</button>
+                <button class="filter-chip" data-filter="digital">Digital Logic &amp; PCB</button>
+                <button class="filter-chip" data-filter="software">Systems Software</button>
+            </div>
+
+            <div class="projects-grid" id="projects-grid">
+                <article class="project-card" data-category="digital">
+                    <div class="project-top">
+                        <span class="project-tag">Digital Logic &bull; Verilog</span>
+                        <span class="project-year">2026</span>
+                    </div>
+                    <h3>8-Bit Breadboard &amp; FPGA Soft-Core CPU</h3>
+                    <p>Designed a custom 8-bit Von Neumann processor with an Arithmetic Logic Unit (ALU), 4 general-purpose registers, program counter, and 16-instruction ISA synthesized on an Artix-7 FPGA.</p>
+                    <div class="tech-pills">
+                        <span>Verilog</span><span>Vivado</span><span>Digital Logic</span><span>Assembly</span>
+                    </div>
+                    <button class="btn btn-outline btn-sm project-detail-btn" data-project="cpu">Inspect Architecture &rarr;</button>
+                </article>
+
+                <article class="project-card" data-category="embedded">
+                    <div class="project-top">
+                        <span class="project-tag">Embedded Systems &bull; C++</span>
+                        <span class="project-year">2026</span>
+                    </div>
+                    <h3>PID Autonomous Maze-Solving Rover</h3>
+                    <p>Engineered an STM32-powered differential-drive robot using LiDAR time-of-flight sensors, quadrature encoders, and a flood-fill pathfinding algorithm to map unknown mazes in under 18 seconds.</p>
+                    <div class="tech-pills">
+                        <span>STM32</span><span>Embedded C++</span><span>PID Control</span><span>FreeRTOS</span>
+                    </div>
+                    <button class="btn btn-outline btn-sm project-detail-btn" data-project="rover">Inspect Architecture &rarr;</button>
+                </article>
+
+                <article class="project-card" data-category="digital">
+                    <div class="project-top">
+                        <span class="project-tag">PCB Design &bull; KiCad</span>
+                        <span class="project-year">2025</span>
+                    </div>
+                    <h3>Custom RP2040 Mechanical Macropad &amp; OLED</h3>
+                    <p>Routed a 2-layer custom PCB in KiCad featuring hot-swappable mechanical switches, rotary encoder, ESD protection, and an I2C OLED display showing real-time CPU/RAM telemetry.</p>
+                    <div class="tech-pills">
+                        <span>KiCad</span><span>RP2040</span><span>I2C / USB-HID</span><span>Soldering</span>
+                    </div>
+                    <button class="btn btn-outline btn-sm project-detail-btn" data-project="macropad">Inspect Architecture &rarr;</button>
+                </article>
+
+                <article class="project-card" data-category="embedded">
+                    <div class="project-top">
+                        <span class="project-tag">IoT &bull; Edge Telemetry</span>
+                        <span class="project-year">2025</span>
+                    </div>
+                    <h3>LoRa Campus Micro-Weather &amp; Air Node</h3>
+                    <p>Solar-charged ESP32 sensor station transmitting temperature, barometric pressure, and PM2.5 data over 1.2 km via LoRa radio to a local web dashboard with zero Wi-Fi dependency.</p>
+                    <div class="tech-pills">
+                        <span>ESP32</span><span>LoRa</span><span>MQTT</span><span>Low-Power Sleep</span>
+                    </div>
+                    <button class="btn btn-outline btn-sm project-detail-btn" data-project="lora">Inspect Architecture &rarr;</button>
+                </article>
+
+                <article class="project-card" data-category="software">
+                    <div class="project-top">
+                        <span class="project-tag">Systems &bull; C</span>
+                        <span class="project-year">2025</span>
+                    </div>
+                    <h3>Cycle-Accurate RISC-V Instruction Simulator</h3>
+                    <p>Built a command-line emulator in C capable of decoding RV32I binary executables, visualizing 5-stage pipeline hazards, and reporting cache hit/miss ratios.</p>
+                    <div class="tech-pills">
+                        <span>C11</span><span>RISC-V</span><span>Computer Arch</span><span>GDB</span>
+                    </div>
+                    <button class="btn btn-outline btn-sm project-detail-btn" data-project="riscv">Inspect Architecture &rarr;</button>
+                </article>
+
+                <article class="project-card" data-category="software">
+                    <div class="project-top">
+                        <span class="project-tag">Computer Vision &bull; Python</span>
+                        <span class="project-year">2024</span>
+                    </div>
+                    <h3>Automated PCB Solder-Joint Defect Detector</h3>
+                    <p>Trained a lightweight convolutional classifier with OpenCV preprocessing to flag cold solder joints and bridges on student club circuit boards using a USB microscope.</p>
+                    <div class="tech-pills">
+                        <span>Python</span><span>OpenCV</span><span>PyTorch</span><span>Quality Control</span>
+                    </div>
+                    <button class="btn btn-outline btn-sm project-detail-btn" data-project="pcbcv">Inspect Architecture &rarr;</button>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Project Architecture Modal -->
+    <div id="project-modal" class="modal hidden" role="dialog" aria-modal="true">
+        <div class="modal-box">
+            <button class="modal-close" id="close-project-modal" aria-label="Close modal">&times;</button>
+            <span id="modal-tag" class="project-tag"></span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-summary" class="modal-summary"></p>
+            <div class="modal-specs">
+                <h4>System Specifications &amp; Engineering Outcomes</h4>
+                <ul id="modal-bullets"></ul>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-left">
+                <p class="footer-title">&lt;alex.chen /&gt; — Incoming Computer Engineering Freshman</p>
+                <p class="footer-sub">Engineered with pure HTML, CSS &amp; JavaScript. Zero frameworks, full control.</p>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="achievements.html">Achievements</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

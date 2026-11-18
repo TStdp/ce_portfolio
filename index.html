@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Chen | Computer Engineering Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="has-boot">
+    <!-- Boot Sequence Overlay -->
+    <div id="boot-overlay" class="boot-overlay" aria-hidden="true">
+        <div class="boot-terminal">
+            <div class="boot-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="boot-title">BIOS_POST // ALEX_CHEN_PORTFOLIO_v2026.bin</span>
+            </div>
+            <pre id="boot-log" class="boot-log"></pre>
+            <div class="boot-footer">
+                <div class="boot-progress-track"><div id="boot-progress-bar" class="boot-progress-bar"></div></div>
+                <button id="skip-boot-btn" class="skip-boot-btn">[ESC / Skip Boot]</button>
+            </div>
+        </div>
+    </div>
+
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="index.html" class="brand">
+                <span class="brand-bracket">&lt;</span>alex.chen<span class="brand-slash">/</span><span class="brand-bracket">&gt;</span>
+                <span class="brand-tag">CE '30</span>
+            </a>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link active">01. Home &amp; Build</a>
+                <a href="projects.html" class="nav-link ">02. Projects</a>
+                <a href="achievements.html" class="nav-link ">03. Achievements</a>
+                <a href="about.html" class="nav-link ">04. About Me</a>
+                <a href="contact.html" class="nav-link ">05. Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container hero-grid">
+                <div class="hero-text">
+                    <div class="status-pill">
+                        <span class="pulse-dot"></span>
+                        <span>Incoming B.S. Computer Engineering &bull; Class of 2030</span>
+                    </div>
+                    <h1>Bridging <span class="gradient-text">Silicon</span> &amp; <span class="gradient-text">Software</span>.</h1>
+                    <p class="hero-desc">
+                        Hi, I'm <strong>Alex Chen</strong>—an aspiring Computer Engineer passionate about embedded systems, digital logic design, PCB prototyping, and low-level firmware. Explore my projects, competition milestones, or assemble my custom workstation below.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="projects.html" class="btn btn-primary">Explore Engineering Work &rarr;</a>
+                        <a href="#pc-builder" class="btn btn-outline">Launch PC Assembly Lab</a>
+                    </div>
+                    <div class="quick-stats">
+                        <div class="q-stat">
+                            <span class="q-num">12+</span>
+                            <span class="q-label">Hardware &amp; Code Builds</span>
+                        </div>
+                        <div class="q-stat">
+                            <span class="q-num">4</span>
+                            <span class="q-label">Robotics &amp; Olympiad Awards</span>
+                        </div>
+                        <div class="q-stat">
+                            <span class="q-num">C++ / Verilog</span>
+                            <span class="q-label">Core Stack</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Blueprint Preview Card -->
+                <div class="hero-card">
+                    <div class="card-topbar">
+                        <span class="mono-label">SYS_ARCHITECTURE.svg</span>
+                        <span class="badge-tech">READY</span>
+                    </div>
+                    <div class="chip-diagram">
+                        <div class="chip-core">
+                            <span class="chip-title">CE-CORE</span>
+                            <span class="chip-sub">ALU &bull; FPU &bull; GPIO</span>
+                        </div>
+                        <div class="chip-pins top"><span></span><span></span><span></span><span></span></div>
+                        <div class="chip-pins bottom"><span></span><span></span><span></span><span></span></div>
+                        <div class="chip-pins left"><span></span><span></span><span></span></div>
+                        <div class="chip-pins right"><span></span><span></span><span></span></div>
+                    </div>
+                    <div class="terminal-snippet">
+                        <p><span class="t-prompt">$</span> make flash TARGET=stm32f4</p>
+                        <p class="t-muted">[OK] Clock configured @ 168 MHz</p>
+                        <p class="t-muted">[OK] Portfolio modules mounted</p>
+                        <p><span class="t-prompt">$</span> <span class="cursor-blink">_</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Jigsaw PC Assembling Lab -->
+        <section id="pc-builder" class="builder-section">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-kicker">// INTERACTIVE HARDWARE BENCH</span>
+                    <h2>Jigsaw Workstation Assembler</h2>
+                    <p>Click each hardware component in the parts tray—or drag/select parts in order—to snap them into the open ATX chassis and power on the system.</p>
+                </div>
+
+                <div class="builder-workspace">
+                    <!-- Left: Parts Tray -->
+                    <div class="parts-panel">
+                        <div class="panel-header">
+                            <h3>1. Component Tray</h3>
+                            <span id="parts-counter" class="mono-badge">0 / 6 Installed</span>
+                        </div>
+                        <p class="panel-hint">Click a component below to snap it into its matching motherboard/chassis slot:</p>
+                        <div class="parts-list" id="parts-list">
+                            <button class="part-item" data-part="mobo">
+                                <span class="part-icon">🟩</span>
+                                <div class="part-meta">
+                                    <strong>ATX Motherboard</strong>
+                                    <span>Z790 Chipset &bull; LGA1700</span>
+                                </div>
+                                <span class="part-action">+ Snap</span>
+                            </button>
+                            <button class="part-item" data-part="cpu">
+                                <span class="part-icon">🔲</span>
+                                <div class="part-meta">
+                                    <strong>Multi-Core CPU</strong>
+                                    <span>16-Core @ 5.4 GHz</span>
+                                </div>
+                                <span class="part-action">+ Snap</span>
+                            </button>
+                            <button class="part-item" data-part="ram">
+                                <span class="part-icon">📏</span>
+                                <div class="part-meta">
+                                    <strong>32GB DDR5 RAM</strong>
+                                    <span>Dual-Channel 6000 MT/s</span>
+                                </div>
+                                <span class="part-action">+ Snap</span>
+                            </button>
+                            <button class="part-item" data-part="ssd">
+                                <span class="part-icon">💾</span>
+                                <div class="part-meta">
+                                    <strong>2TB NVMe M.2 SSD</strong>
+                                    <span>PCIe Gen4 x4 Storage</span>
+                                </div>
+                                <span class="part-action">+ Snap</span>
+                            </button>
+                            <button class="part-item" data-part="gpu">
+                                <span class="part-icon">🎛️</span>
+                                <div class="part-meta">
+                                    <strong>RTX Compute GPU</strong>
+                                    <span>CUDA &amp; Simulation Accel</span>
+                                </div>
+                                <span class="part-action">+ Snap</span>
+                            </button>
+                            <button class="part-item" data-part="psu">
+                                <span class="part-icon">⚡</span>
+                                <div class="part-meta">
+                                    <strong>850W Modular PSU</strong>
+                                    <span>80+ Gold Power Delivery</span>
+                                </div>
+                                <span class="part-action">+ Snap</span>
+                            </button>
+                        </div>
+
+                        <div class="builder-controls">
+                            <button id="power-btn" class="btn btn-primary full-width" disabled>⚡ Power On System</button>
+                            <button id="reset-pc-btn" class="btn btn-outline full-width">↺ Disassemble / Reset</button>
+                        </div>
+                    </div>
+
+                    <!-- Center: Interactive Jigsaw Chassis -->
+                    <div class="chassis-panel">
+                        <div class="panel-header">
+                            <h3>2. Open ATX Chassis Blueprint</h3>
+                            <span id="chassis-status" class="status-tag">STATUS: UNASSEMBLED</span>
+                        </div>
+
+                        <div class="pc-chassis" id="pc-chassis">
+                            <!-- Jigsaw Motherboard Backplate Slot -->
+                            <div class="jigsaw-slot slot-mobo" data-slot="mobo" title="Motherboard Tray">
+                                <span class="slot-label">JIGSAW SLOT A: ATX MOTHERBOARD TRAY</span>
+
+                                <!-- Inner Motherboard Sockets -->
+                                <div class="mobo-board">
+                                    <div class="jigsaw-slot slot-cpu" data-slot="cpu">
+                                        <span class="slot-code">LGA SOCKET</span>
+                                        <span class="slot-name">CPU</span>
+                                    </div>
+
+                                    <div class="jigsaw-slot slot-ram" data-slot="ram">
+                                        <span class="slot-code">DIMM A2/B2</span>
+                                        <span class="slot-name">DDR5 RAM</span>
+                                    </div>
+
+                                    <div class="jigsaw-slot slot-ssd" data-slot="ssd">
+                                        <span class="slot-code">M.2_1</span>
+                                        <span class="slot-name">NVMe SSD</span>
+                                    </div>
+
+                                    <div class="jigsaw-slot slot-gpu" data-slot="gpu">
+                                        <span class="slot-code">PCIe x16</span>
+                                        <span class="slot-name">GRAPHICS / CUDA GPU</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Bottom PSU Shroud Slot -->
+                            <div class="jigsaw-slot slot-psu" data-slot="psu">
+                                <span class="slot-code">ATX POWER BAY</span>
+                                <span class="slot-name">850W POWER SUPPLY UNIT</span>
+                            </div>
+
+                            <!-- Powered-On Screen / POST Diagnostic Overlay -->
+                            <div id="pc-post-banner" class="pc-post-banner hidden">
+                                <div class="post-glow">✓ SYSTEM POST SUCCESSFUL — ALL BUSES ONLINE</div>
+                                <p>Ready to compile Verilog, run SPICE simulations, and build firmware!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Engineering Inspector -->
+                    <div class="inspector-panel">
+                        <div class="panel-header">
+                            <h3>3. Hardware Telemetry</h3>
+                            <span class="mono-badge">INSPECTOR</span>
+                        </div>
+                        <div id="part-inspector" class="inspector-box">
+                            <p class="inspector-placeholder">Select or install any component to inspect its architecture role in a Computer Engineering workstation.</p>
+                        </div>
+                        <div class="telemetry-log" id="telemetry-log">
+                            <div class="log-entry">[BENCH] Waiting for component installation...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Highlights Navigation -->
+        <section class="highlights-section">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-kicker">// PORTFOLIO DIRECTORY</span>
+                    <h2>Explore Full Dossier</h2>
+                </div>
+                <div class="directory-grid">
+                    <a href="projects.html" class="dir-card">
+                        <span class="dir-num">02</span>
+                        <h3>Projects &amp; Prototypes</h3>
+                        <p>FPGA 8-bit CPU, Autonomous Line-Following Rover, Smart Campus Energy Monitor, and Custom Mechanical Macropad.</p>
+                        <span class="dir-link">View Projects &rarr;</span>
+                    </a>
+                    <a href="achievements.html" class="dir-card">
+                        <span class="dir-num">03</span>
+                        <h3>Honors &amp; Achievements</h3>
+                        <p>National Robotics Finalist, Computing Olympiad Silver Medalist, Science Fair Engineering Award, and AP Scholar.</p>
+                        <span class="dir-link">View Milestones &rarr;</span>
+                    </a>
+                    <a href="about.html" class="dir-card">
+                        <span class="dir-num">04</span>
+                        <h3>About &amp; University Goals</h3>
+                        <p>My journey from soldering my first LED circuit to pursuing Computer Engineering, plus technical skills &amp; coursework.</p>
+                        <span class="dir-link">Read Bio &rarr;</span>
+                    </a>
+                    <a href="contact.html" class="dir-card">
+                        <span class="dir-num">05</span>
+                        <h3>Contact &amp; Collaboration</h3>
+                        <p>Connect regarding university research labs, summer internships, hackathon teams, or open-source hardware.</p>
+                        <span class="dir-link">Get in Touch &rarr;</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-left">
+                <p class="footer-title">&lt;alex.chen /&gt; — Incoming Computer Engineering Freshman</p>
+                <p class="footer-sub">Engineered with pure HTML, CSS &amp; JavaScript. Zero frameworks, full control.</p>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="achievements.html">Achievements</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
